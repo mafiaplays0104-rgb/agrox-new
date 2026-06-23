@@ -1,0 +1,218 @@
+<?php
+// === SMART PATH SYSTEM ===
+// Checks if assets/css/style.css is in the current folder. 
+// If NOT, we assume we are in the 'products' folder and go up one level ('../')
+$path = file_exists('assets/css/style.css') ? '' : '../';
+$prodPath = file_exists('assets/css/style.css') ? 'products/' : '';
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="<?php echo $path; ?>assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="<?php echo $path; ?>assets/images/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGROX - Organic Exports</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="<?php echo $path; ?>assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonts and Icons for Stitch Rebuild -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- DROPDOWN CSS --- */
+        
+        /* Parent Container - Fixed Alignment */
+        .nav-item-dropdown {
+            position: relative;
+            display: inline-block; /* Ensures it aligns with other links */
+            height: auto;
+        }
+
+        /* The Dropdown Box */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%; /* Position right below the nav item */
+            left: 50%;
+            transform: translateX(-50%) translateY(20px) scale(0.95); /* Start lower and slightly smaller */
+            width: 240px;
+            background: rgba(14, 27, 19, 0.95); /* Deep dark theme color */
+            backdrop-filter: blur(20px); /* Heavy glass blur */
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 10px 0;
+            opacity: 0;
+            visibility: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Cinematic Spring Effect */
+            z-index: 1000;
+            list-style: none;
+            margin-top: 10px; /* Small gap to prevent accidental closing */
+        }
+
+        /* Show Dropdown on Hover */
+        .nav-item-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0) scale(1); /* Slide up to position */
+        }
+
+        /* Dropdown Items */
+        .dropdown-menu li {
+            display: block;
+            margin: 0;
+            width: 100%;
+        }
+
+        .dropdown-menu li a {
+            display: block;
+            padding: 12px 25px;
+            color: #ccc;
+            font-family: 'Poppins', sans-serif; 
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-align: center; 
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+            white-space: nowrap; /* Prevent text wrapping */
+        }
+
+        .dropdown-menu li:last-child a {
+            border-bottom: none;
+        }
+
+        /* Hover Effect for Items */
+        .dropdown-menu li a:hover {
+            color: #d4a017; /* Gold Color */
+            background: rgba(255, 255, 255, 0.05);
+            padding-left: 35px; /* Subtle slide right interaction */
+            padding-right: 15px;
+        }
+
+        /* Highlight "All Products" differently */
+        .dropdown-menu li:first-child a {
+            font-weight: 600;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.02);
+        }
+        .dropdown-menu li:first-child a:hover {
+            background: rgba(212, 160, 23, 0.1);
+            color: #d4a017;
+        }
+
+        /* Small arrow on top of dropdown */
+        .dropdown-menu::before {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            width: 12px;
+            height: 12px;
+            background: rgba(14, 27, 19, 0.95);
+            border-left: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="glass-nav" id="navbar">
+        <div class="nav-logo" onclick="window.location.href='<?php echo $path; ?>index.php'">
+            <span class="nav-flip">
+                <img src="<?php echo $path; ?>assets/images/agroxtopbhairav.png" alt="AGROX Logo">
+            </span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="<?php echo $path; ?>index.php"><span class="nav-flip">HOME</span></a></li>
+            <li><a href="<?php echo $path; ?>about-us.php"><span class="nav-flip">ABOUT</span></a></li>
+            
+            <li class="nav-item-dropdown">
+                <a href="<?php echo $path; ?>all-products.php"><span class="nav-flip">PRODUCTS</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="<?php echo $path; ?>all-products.php">All Products</a></li>
+                    <li><a href="<?php echo $prodPath; ?>whole-spices.php">Whole Spices</a></li>
+                    <li><a href="<?php echo $prodPath; ?>powdered-spices.php">Powdered Spices</a></li>
+                    <li><a href="<?php echo $prodPath; ?>dry-fruits.php">Dry Fruits & Nuts</a></li>
+                    <li><a href="<?php echo $prodPath; ?>grains-and-pulses.php">Pulses & Lentils</a></li>
+                    <li><a href="<?php echo $prodPath; ?>rice-varieties.php">Rice Varieties</a></li>
+                    <li><a href="<?php echo $prodPath; ?>extract-oil.php">Extract Oils</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="<?php echo $path; ?>contact-us.php"><span class="nav-flip">CONTACT</span></a></li>
+        </ul>
+        <div class="hamburger" id="hamburger-menu" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="nav-menu-mobile" id="nav-menu-mobile">
+        <ul>
+            <li><a href="<?php echo $path; ?>index.php" class="mobile-link">HOME</a></li>
+            <li><a href="<?php echo $path; ?>about-us.php" class="mobile-link">ABOUT</a></li>
+            <li class="mobile-dropdown-parent">
+                <div class="mobile-dropdown-toggle">PRODUCTS <i class="fa-solid fa-chevron-down" style="font-size:0.75rem; margin-left: 4px;"></i></div>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="<?php echo $path; ?>all-products.php" class="mobile-link">All Products</a></li>
+                    <li><a href="<?php echo $prodPath; ?>whole-spices.php" class="mobile-link">Whole Spices</a></li>
+                    <li><a href="<?php echo $prodPath; ?>powdered-spices.php" class="mobile-link">Powdered Spices</a></li>
+                    <li><a href="<?php echo $prodPath; ?>dry-fruits.php" class="mobile-link">Dry Fruits & Nuts</a></li>
+                    <li><a href="<?php echo $prodPath; ?>grains-and-pulses.php" class="mobile-link">Pulses & Lentils</a></li>
+                    <li><a href="<?php echo $prodPath; ?>rice-varieties.php" class="mobile-link">Rice Varieties</a></li>
+                    <li><a href="<?php echo $prodPath; ?>extract-oil.php" class="mobile-link">Extract Oils</a></li>
+                </ul>
+            </li>
+            <li><a href="<?php echo $path; ?>contact-us.php" class="mobile-link">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const path = window.location.pathname;
+            // Activate nav if not on homepage
+            if (!path.includes("index.php") && path !== "/" && !path.endsWith("/")) {
+                const nav = document.getElementById('navbar');
+                if(nav) {
+                    nav.classList.add('active');
+                    nav.style.background = '#0e1b13';
+                }
+            }
+
+            // Mobile Menu Toggle
+            const hamburger = document.getElementById('hamburger-menu');
+            const mobileMenu = document.getElementById('nav-menu-mobile');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    mobileMenu.classList.toggle('active');
+                    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+                });
+
+                document.querySelectorAll('.mobile-link').forEach(link => {
+                    link.addEventListener('click', function() {
+                        hamburger.classList.remove('active');
+                        mobileMenu.classList.remove('active');
+                        document.body.style.overflow = '';
+                    });
+                });
+            }
+
+            // Mobile Dropdown Products Toggle
+            const mobileToggle = document.querySelector('.mobile-dropdown-toggle');
+            const mobileParent = document.querySelector('.mobile-dropdown-parent');
+            if (mobileToggle && mobileParent) {
+                mobileToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    mobileParent.classList.toggle('active');
+                });
+            }
+        });
+    </script>

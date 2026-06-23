@@ -1,0 +1,971 @@
+<?php 
+// ----------------------------------------------------------------
+//  PAGE CONFIGURATION: HOME
+// ----------------------------------------------------------------
+$pageTitle = "AGROX | Organic Exports India - Premium Spices & Dry Fruits";
+
+// SEO DATA
+$metaDescription = "AGROX Organic Exports connects India's pristine organic farms to the world. We export certified organic spices, dry fruits, and essential oils globally.";
+$canonicalURL = "https://www.theagroxgroup.com/"; 
+$metaKeywords = "organic exports india, agrox group, certified organic spices, dry fruits exporter, indian spices, bulk organic supplier";
+
+// SOCIAL SHARE DATA
+$ogTitle = "AGROX - Cultivating Trust, Exporting Purity";
+$ogDescription = "From farm to world. Discover our range of certified organic spices, fruits, and oils.";
+$ogImage = "https://www.theagroxgroup.com/assets/images/bannerproduct.avif"; 
+
+include 'header.php'; 
+?>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.theagroxgroup.com/#organization",
+      "name": "AGROX Organic Exports",
+      "url": "<?php echo $canonicalURL; ?>",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.theagroxgroup.com/assets/images/logo.png",
+        "width": 600,
+        "height": 60
+      },
+      "description": "Leading exporter of certified organic spices, dry fruits, and agricultural products from India.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-73200-40684",
+        "contactType": "sales",
+        "areaServed": "Global"
+      },
+      "sameAs": [
+        "https://www.facebook.com/agroxgroup",
+        "https://www.instagram.com/agroxgroup",
+        "https://www.linkedin.com/company/agroxgroup"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.theagroxgroup.com/#website",
+      "url": "<?php echo $canonicalURL; ?>",
+      "name": "AGROX Organic Exports",
+      "publisher": { "@id": "https://www.theagroxgroup.com/#organization" }
+    }
+  ]
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+
+<style>
+    /* --- UTILITY CLASSES --- */
+    .visually-hidden {
+        position: absolute; width: 1px; height: 1px; margin: -1px;
+        padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;
+    }
+    .text-serif { font-family: 'Times New Roman', serif; }
+    .text-serif-lg { font-family: 'Times New Roman', serif; font-size: 3.5rem; }
+    .text-accent { color: var(--accent, #d4a017); }
+    .text-emoji { font-size: 1.1rem; }
+    .sub-desc-centered { color: #ccc; max-width: 600px; margin: 0 auto; }
+
+    /* Parallax Stage */
+    #stage {
+        position: fixed; top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1920px; height: 1080px;
+        pointer-events: none; z-index: -1;
+    }
+
+    /* Glide Scroll Fixes */
+    html.lenis { height: auto; }
+    .lenis.lenis-smooth { scroll-behavior: auto; }
+    .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+    .lenis.lenis-stopped { overflow: hidden; }
+
+    /* --- MANDATORY FIXES FOR FOOTER VISIBILITY --- */
+    #main-content {
+        position: relative;
+        z-index: 10;
+        background: #0b0b0b;
+        overflow: visible;
+    }
+
+    footer {
+        position: relative;
+        z-index: 20;
+        display: block !important;
+        visibility: visible !important;
+        background: #050505;
+        clear: both;
+    }
+</style>
+
+    <h1 class="visually-hidden">AGROX Organic Exports - Premium Spices & Dry Fruits from India</h1>
+
+    <div id="stage">
+        <img id="layerTop" class="layer" src="assets/images/top.png" alt="Background Layer">
+        <img id="layerMid2" class="layer" src="assets/images/mid2.png" alt="Midground Layer 2">
+        <img id="layerMid1" class="layer" src="assets/images/mid1.png" alt="Midground Layer 1">
+        <img id="layerBottom" class="layer" src="assets/images/bottom.png" alt="Foreground Layer">
+    </div>
+
+    <div id="page1-spacer">
+        <div class="hero-editorial-container">
+            <div class="hero-editorial-column">
+                <div class="hero-editorial-tagline">ROOTED IN INDIA</div>
+                <h2 class="hero-editorial-headline">
+                    <span>EXPORTING</span>
+                    <span>NATURE'S</span>
+                    <span class="accent-gold">FINEST</span>
+                </h2>
+                <p class="hero-editorial-description">Sustainably sourced, carefully processed and globally trusted organic products.</p>
+                <a href="#our-story" class="hero-editorial-cta">
+                    <span class="cta-text">EXPLORE OUR WORLD</span>
+                    <span class="cta-arrow-circle">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </a>
+            </div>
+            
+            <div class="hero-certified-badge">
+                <svg class="organic-seal" viewBox="0 0 200 200" width="160" height="160">
+                    <path id="sealTextPath" d="M 100, 100 m -68, 0 a 68,68 0 1,1 136,0 a 68,68 0 1,1 -136,0" fill="none"/>
+                    <circle cx="100" cy="100" r="82" fill="none" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1"/>
+                    <circle cx="100" cy="100" r="54" fill="none" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1"/>
+                    <text fill="rgba(255, 255, 255, 0.6)" font-family="var(--brand-font)" font-size="8.5" font-weight="600" letter-spacing="1.8">
+                        <textPath href="#sealTextPath" startOffset="0%">ORGANIC • CERTIFIED • PREMIUM EXPORTS •</textPath>
+                    </text>
+                    <text x="100" y="113" font-family="'Times New Roman', Georgia, serif" font-size="40" font-weight="normal" fill="#ffffff" text-anchor="middle">G</text>
+                </svg>
+            </div>
+        </div>
+
+        <div class="hero-scroll-indicator">
+            <div class="scroll-mouse-icon">
+                <div class="scroll-dot"></div>
+            </div>
+            <span class="scroll-text">SCROLL TO EXPLORE</span>
+        </div>
+    </div>
+
+    <div id="main-content">
+        
+        <section id="our-story" class="story-section">
+            <!-- Background Outline Text -->
+            <div class="story-outline-text anim-trigger anim-scale-up">NATURE</div>
+            
+            <div class="container">
+                <!-- Main Content -->
+                <div class="story-text-block">
+                    <h2 class="story-main-title anim-trigger anim-slide-up delay-100">
+                        Nature doesn't<br>
+                        produce products.<br>It produces <span class="text-accent">Stories</span>
+                    </h2>
+                    <p class="story-main-desc anim-trigger anim-slide-up delay-200">
+                        We work with nature, not against it. Every product we export carries the purity of our soil and the honesty of our people.
+                    </p>
+                    <a class="story-cta-btn anim-trigger anim-slide-up delay-300" href="about-us.php">
+                        KNOW OUR STORY
+                        <span class="arrow-circle">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+                
+                <!-- Bottom Features Box -->
+                <div class="story-features-card anim-trigger anim-slide-up delay-300">
+                    <!-- Feature 1: Sustainable -->
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Sustainable</h3>
+                            <p>Sourced with care for<br>a better tomorrow.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-divider"></div>
+                    
+                    <!-- Feature 2: Pure & Natural -->
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 2v4"></path>
+                                <path d="M16 2v4"></path>
+                                <rect height="18" rx="2" width="18" x="3" y="4"></rect>
+                                <path d="M3 10h18"></path>
+                                <path d="M8 14h.01"></path>
+                                <path d="M12 14h.01"></path>
+                                <path d="M16 14h.01"></path>
+                                <path d="M8 18h.01"></path>
+                                <path d="M12 18h.01"></path>
+                                <path d="M16 18h.01"></path>
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Pure &amp; Natural</h3>
+                            <p>Uncompromised purity,<br>just as nature intended.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-divider"></div>
+                    
+                    <!-- Feature 3: People First -->
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h3>People First</h3>
+                            <p>Empowering communities<br>that grow with us.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="harvest">
+            <!-- Background Outline Text -->
+            <div class="harvest-outline-text anim-trigger anim-scale-up">PRODUCTS</div>
+            
+            <div class="container">
+                <!-- Header Grid -->
+                <div class="harvest-header-grid">
+                    <!-- Left Column -->
+                    <div class="harvest-header-left">
+                        <span class="harvest-pretitle anim-trigger anim-slide-up">OUR PRODUCTS</span>
+                        <h2 class="harvest-main-title anim-trigger anim-slide-up delay-100">
+                            NATURE’S FINEST,<br>
+                            <span class="text-accent">CAREFULLY SELECTED.</span>
+                        </h2>
+                        <p class="harvest-desc anim-trigger anim-slide-up delay-200">
+                            From the richest soils of India to the world, explore our wide range of premium organic products.
+                        </p>
+                        <a class="harvest-explore-btn anim-trigger anim-slide-up delay-300" href="all-products.php">
+                            EXPLORE PRODUCTS
+                            <span class="btn-arrow-circle">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                    
+                    <!-- Right Column Accents -->
+                    <div class="harvest-accents anim-trigger anim-slide-up delay-200">
+                        <div class="accent-row">
+                            <span>100% ORGANIC</span>
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                            </svg>
+                        </div>
+                        <div class="accent-row">
+                            <span>CAREFULLY HANDPICKED</span>
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 22V12M12 12c-2-2-5-1-5-4s3-4 5-4 5 1 5 4-3 2-5 4z"></path>
+                            </svg>
+                        </div>
+                        <div class="accent-row">
+                            <span>GLOBALLY TRUSTED</span>
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Category Cards Grid -->
+                <div class="products-cards-grid">
+                    <!-- SPICES -->
+                    <div class="product-category-card anim-trigger anim-slide-up delay-0" onclick="window.location.href='products/whole-spices.php'">
+                        <img class="card-bg-img" src="assets/images/p_spices.png" alt="Spices">
+                        <div class="card-dark-overlay"></div>
+                        <div class="card-content">
+                            <div class="card-icon-circle">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 3a6 6 0 0 0-9 9h18a6 6 0 0 0-9-9zM2 12h20M5 16h14M8 20h8"></path>
+                                </svg>
+                            </div>
+                            <h3 class="card-title">SPICES</h3>
+                            <div class="card-cta-row">
+                                <span class="card-cta-text">VIEW PRODUCTS</span>
+                                <div class="card-cta-circle">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- HERBS -->
+                    <div class="product-category-card anim-trigger anim-slide-up delay-100" onclick="window.location.href='products/powdered-spices.php'">
+                        <img class="card-bg-img" src="assets/images/p_herbs.png" alt="Herbs">
+                        <div class="card-dark-overlay"></div>
+                        <div class="card-content">
+                            <div class="card-icon-circle">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                                    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                                </svg>
+                            </div>
+                            <h3 class="card-title">HERBS</h3>
+                            <div class="card-cta-row">
+                                <span class="card-cta-text">VIEW PRODUCTS</span>
+                                <div class="card-cta-circle">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- DRY FRUITS -->
+                    <div class="product-category-card anim-trigger anim-slide-up delay-200" onclick="window.location.href='products/dry-fruits.php'">
+                        <img class="card-bg-img" src="assets/images/p_dry_fruits.png" alt="Dry Fruits">
+                        <div class="card-dark-overlay"></div>
+                        <div class="card-content">
+                            <div class="card-icon-circle">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="9"></circle>
+                                    <path d="M12 8a4 4 0 0 0-4 4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="card-title">DRY FRUITS</h3>
+                            <div class="card-cta-row">
+                                <span class="card-cta-text">VIEW PRODUCTS</span>
+                                <div class="card-cta-circle">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- SEEDS -->
+                    <div class="product-category-card anim-trigger anim-slide-up delay-300" onclick="window.location.href='products/rice-varieties.php'">
+                        <img class="card-bg-img" src="assets/images/p_seeds.png" alt="Seeds">
+                        <div class="card-dark-overlay"></div>
+                        <div class="card-content">
+                            <div class="card-icon-circle">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 10V2M12 2L9 5M12 2l3 3M4 22h16M6 17h12M8 12h8"></path>
+                                </svg>
+                            </div>
+                            <h3 class="card-title">SEEDS</h3>
+                            <div class="card-cta-row">
+                                <span class="card-cta-text">VIEW PRODUCTS</span>
+                                <div class="card-cta-circle">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- PULSES -->
+                    <div class="product-category-card anim-trigger anim-slide-up delay-300" onclick="window.location.href='products/grains-and-pulses.php'">
+                        <img class="card-bg-img" src="assets/images/p_pulses.png" alt="Pulses">
+                        <div class="card-dark-overlay"></div>
+                        <div class="card-content">
+                            <div class="card-icon-circle">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"></path>
+                                </svg>
+                            </div>
+                            <h3 class="card-title">PULSES</h3>
+                            <div class="card-cta-row">
+                                <span class="card-cta-text">VIEW PRODUCTS</span>
+                                <div class="card-cta-circle">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Section Footer Navigation -->
+                <div class="harvest-footer">
+                    <div class="harvest-footer-nav">
+                        <button class="harvest-footer-btn anim-trigger anim-scale-up" onclick="document.getElementById('our-story').scrollIntoView({ behavior: 'smooth' });">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M19 12H5M12 19l-7-7 7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="harvest-footer-text anim-trigger anim-slide-up">
+                            <span class="harvest-footer-num">04</span>
+                            <span class="harvest-footer-label">NEXT SECTION</span>
+                        </div>
+                        <button class="harvest-footer-btn anim-trigger anim-scale-up" onclick="document.getElementById('journey-process').scrollIntoView({ behavior: 'smooth' });">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="journey-process" class="origin-section relative min-h-screen w-full flex flex-col justify-end pt-32 lg:pt-0">
+            <!-- Cinematic Background Image -->
+            <div class="absolute inset-0 z-0 overflow-hidden">
+                <img alt="Lush green landscape of Indian mountains" class="w-full h-full object-cover brightness-[0.4]" src="assets/images/page4.png">
+                <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-surface/60 via-transparent to-transparent"></div>
+            </div>
+            <!-- Background Typography -->
+            <div class="absolute top-[15%] left-0 w-full overflow-hidden pointer-events-none opacity-[0.03] z-0 select-none">
+                <h2 class="font-display text-[25vw] leading-none whitespace-nowrap -translate-x-[5%] text-on-surface">INDIA</h2>
+            </div>
+            <!-- Content Shell -->
+            <div class="relative z-10 w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-12 flex flex-col h-full justify-between">
+                <!-- Mid-Section Flex Container -->
+                <div class="flex flex-col lg:flex-row gap-16 lg:gap-0 items-start lg:items-center py-10">
+                    <!-- Left Column: Copy -->
+                    <div class="w-full lg:w-1/2 space-y-8 animate-fade-in">
+                        <div>
+                            <span class="font-display text-tertiary tracking-[0.2em] text-[18px] mb-4 block">OUR ORIGIN</span>
+                            <h1 class="font-display text-[56px] md:text-[80px] leading-[1.05] text-on-surface">
+                                ROOTED IN INDIA.<br>
+                                SOURCED WITH PRIDE.<br>
+                                <span class="text-tertiary">SHARED WITH THE WORLD.</span>
+                            </h1>
+                        </div>
+                        <p class="font-body text-on-surface-variant text-[18px] leading-relaxed max-w-lg">
+                            We source our products from the most fertile regions of India, where nature is pure, 
+                            traditions are strong, and quality is a way of life. Every harvest is a testament to 
+                            our commitment to organic excellence.
+                        </p>
+                        <a class="inline-flex items-center gap-4 text-tertiary font-display text-[20px] tracking-widest group" href="about-us.php">
+                            EXPLORE OUR ORIGIN
+                            <span class="flex items-center justify-center w-12 h-12 border border-tertiary rounded-full group-hover:bg-tertiary group-hover:text-on-tertiary transition-all duration-300">
+                                <span class="material-symbols-outlined transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+                            </span>
+                        </a>
+                        <!-- Feature Cards (Bottom Left Grid) -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-12">
+                            <div class="bg-surface-container/40 backdrop-blur-md border border-outline-variant p-6 h-full flex flex-col justify-between hover:border-tertiary transition-colors group">
+                                <div class="text-tertiary mb-6">
+                                    <span class="material-symbols-outlined !text-[40px]" data-icon="agriculture">agriculture</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-display text-[18px] tracking-wider mb-2">ETHICAL SOURCING</h3>
+                                    <p class="text-[12px] text-on-surface-variant font-body leading-snug">Sourced responsibly from local farmers.</p>
+                                </div>
+                            </div>
+                            <div class="bg-surface-container/40 backdrop-blur-md border border-outline-variant p-6 h-full flex flex-col justify-between hover:border-tertiary transition-colors group">
+                                <div class="text-tertiary mb-6">
+                                    <span class="material-symbols-outlined !text-[40px]" data-icon="compost">compost</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-display text-[18px] tracking-wider mb-2">RICH SOIL</h3>
+                                    <p class="text-[12px] text-on-surface-variant font-body leading-snug">From India's most fertile lands.</p>
+                                </div>
+                            </div>
+                            <div class="bg-surface-container/40 backdrop-blur-md border border-outline-variant p-6 h-full flex flex-col justify-between hover:border-tertiary transition-colors group">
+                                <div class="text-tertiary mb-6">
+                                    <span class="material-symbols-outlined !text-[40px]" data-icon="eco">eco</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-display text-[18px] tracking-wider mb-2">PURE & NATURAL</h3>
+                                    <p class="text-[12px] text-on-surface-variant font-body leading-snug">Grown naturally, without compromise.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Column: Interactive Map -->
+                    <div class="w-full lg:w-1/2 relative min-h-[600px] flex items-center justify-center lg:justify-end">
+                        <div class="relative w-full max-w-[500px]">
+                            <!-- Map Image -->
+                            <div class="map-glow opacity-60">
+                                <img class="w-full h-auto grayscale brightness-150" src="assets/images/india_map.png" alt="Interactive Map of India">
+                            </div>
+                            <!-- Region Callouts -->
+                            <!-- Rajasthan -->
+                            <div class="absolute top-[28%] left-[22%] group cursor-pointer">
+                                <div class="w-3 h-3 bg-tertiary rounded-full dot-pulse shadow-[0_0_15px_rgba(248,189,67,0.8)]"></div>
+                                <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 whitespace-nowrap callout-box">
+                                    <div class="flex flex-col items-center">
+                                        <span class="font-display text-tertiary tracking-widest text-[16px] flex items-center gap-1">RAJASTHAN <span class="material-symbols-outlined text-[14px]" data-icon="spa">spa</span></span>
+                                        <span class="font-body text-on-surface-variant text-[12px] uppercase">Spices, Seeds</span>
+                                        <div class="w-px h-6 bg-tertiary/40 mt-1"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Gujarat -->
+                            <div class="absolute top-[48%] left-[12%] group cursor-pointer">
+                                <div class="w-3 h-3 bg-tertiary rounded-full dot-pulse shadow-[0_0_15px_rgba(248,189,67,0.8)]"></div>
+                                <div class="absolute right-full top-1/2 -translate-y-1/2 mr-4 whitespace-nowrap callout-box">
+                                    <div class="flex items-center gap-2">
+                                        <div class="text-right">
+                                            <span class="font-display text-tertiary tracking-widest text-[16px] block flex items-center justify-end gap-1">GUJARAT <span class="material-symbols-outlined text-[14px]" data-icon="spa">spa</span></span>
+                                            <span class="font-body text-on-surface-variant text-[12px] uppercase">Pulses, Herbs</span>
+                                        </div>
+                                        <div class="w-8 h-px bg-tertiary/40"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Bihar -->
+                            <div class="absolute top-[38%] left-[65%] group cursor-pointer">
+                                <div class="w-3 h-3 bg-tertiary rounded-full dot-pulse shadow-[0_0_15px_rgba(248,189,67,0.8)]"></div>
+                                <div class="absolute left-full top-1/2 -translate-y-1/2 ml-4 whitespace-nowrap callout-box">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-8 h-px bg-tertiary/40"></div>
+                                        <div class="text-left">
+                                            <span class="font-display text-tertiary tracking-widest text-[16px] block flex items-center gap-1">BIHAR <span class="material-symbols-outlined text-[14px]" data-icon="spa">spa</span></span>
+                                            <span class="font-body text-on-surface-variant text-[12px] uppercase">Makhana, Litchi</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Assam -->
+                            <div class="absolute top-[42%] left-[85%] group cursor-pointer">
+                                <div class="w-3 h-3 bg-tertiary rounded-full dot-pulse shadow-[0_0_15px_rgba(248,189,67,0.8)]"></div>
+                                <div class="absolute left-full top-1/2 -translate-y-1/2 ml-4 whitespace-nowrap callout-box">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-8 h-px bg-tertiary/40"></div>
+                                        <div class="text-left">
+                                            <span class="font-display text-tertiary tracking-widest text-[16px] block flex items-center gap-1">ASSAM <span class="material-symbols-outlined text-[14px]" data-icon="spa">spa</span></span>
+                                            <span class="font-body text-on-surface-variant text-[12px] uppercase">Tea, Herbs</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Kerala -->
+                            <div class="absolute top-[82%] left-[40%] group cursor-pointer">
+                                <div class="w-3 h-3 bg-tertiary rounded-full dot-pulse shadow-[0_0_15px_rgba(248,189,67,0.8)]"></div>
+                                <div class="absolute right-full top-1/2 -translate-y-1/2 mr-4 whitespace-nowrap callout-box">
+                                    <div class="flex items-center gap-2">
+                                        <div class="text-right">
+                                            <span class="font-display text-tertiary tracking-widest text-[16px] block flex items-center justify-end gap-1">KERALA <span class="material-symbols-outlined text-[14px]" data-icon="spa">spa</span></span>
+                                            <span class="font-body text-on-surface-variant text-[12px] uppercase">Spices, Coconut</span>
+                                        </div>
+                                        <div class="w-8 h-px bg-tertiary/40"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tamil Nadu -->
+                            <div class="absolute top-[78%] left-[55%] group cursor-pointer">
+                                <div class="w-3 h-3 bg-tertiary rounded-full dot-pulse shadow-[0_0_15px_rgba(248,189,67,0.8)]"></div>
+                                <div class="absolute left-full top-1/2 -translate-y-1/2 ml-4 whitespace-nowrap callout-box">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-12 h-px bg-tertiary/40"></div>
+                                        <div class="text-left">
+                                            <span class="font-display text-tertiary tracking-widest text-[16px] block flex items-center gap-1">TAMIL NADU <span class="material-symbols-outlined text-[14px]" data-icon="spa">spa</span></span>
+                                            <span class="font-body text-on-surface-variant text-[12px] uppercase">Spices, Seeds</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bottom Right Statistics Bar -->
+                <div class="w-full flex justify-end mt-auto pt-8">
+                    <div class="origin-stats-bar bg-surface-container-low/60 backdrop-blur-xl border border-outline-variant/30 flex flex-wrap md:flex-nowrap p-8 w-full max-w-4xl">
+                        <div class="stats-col flex items-center gap-6 px-8 py-4 md:py-0 flex-1 min-w-[200px]">
+                            <span class="material-symbols-outlined text-tertiary !text-[44px]" data-icon="groups">groups</span>
+                            <div>
+                                <div class="font-display text-[32px] leading-none text-on-surface">1500+</div>
+                                <div class="font-display tracking-[0.1em] text-[12px] text-tertiary uppercase">FARMERS</div>
+                                <div class="font-body text-[11px] text-on-surface-variant">Empowered</div>
+                            </div>
+                        </div>
+                        <div class="stats-col flex items-center gap-6 px-8 py-4 md:py-0 flex-1 min-w-[200px]">
+                            <span class="material-symbols-outlined text-tertiary !text-[44px]" data-icon="location_on">location_on</span>
+                            <div>
+                                <div class="font-display text-[32px] leading-none text-on-surface">5+</div>
+                                <div class="font-display tracking-[0.1em] text-[12px] text-tertiary uppercase">KEY REGIONS</div>
+                                <div class="font-body text-[11px] text-on-surface-variant">Across India</div>
+                            </div>
+                        </div>
+                        <div class="stats-col flex items-center gap-6 px-8 py-4 md:py-0 flex-1 min-w-[200px]">
+                            <span class="material-symbols-outlined text-tertiary !text-[44px]" data-icon="potted_plant">potted_plant</span>
+                            <div>
+                                <div class="font-display text-[32px] leading-none text-on-surface">100%</div>
+                                <div class="font-display tracking-[0.1em] text-[12px] text-tertiary uppercase">NATURAL</div>
+                                <div class="font-body text-[11px] text-on-surface-variant">No additives</div>
+                            </div>
+                        </div>
+                        <div class="stats-col flex items-center gap-6 px-8 py-4 md:py-0 flex-1 min-w-[200px]">
+                            <span class="material-symbols-outlined text-tertiary !text-[44px]" data-icon="language">language</span>
+                            <div>
+                                <div class="font-display text-[32px] leading-none text-on-surface">45+</div>
+                                <div class="font-display tracking-[0.1em] text-[12px] text-tertiary uppercase">COUNTRIES</div>
+                                <div class="font-body text-[11px] text-on-surface-variant">We export to</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process-refined" class="process-refined-section">
+            <!-- Background Layer -->
+            <div class="process-bg">
+                <img alt="Sunset landscape background" class="process-bg-img" src="assets/images/page5.png">
+                <div class="process-bg-overlay"></div>
+            </div>
+            
+            <!-- Background Watermark Text -->
+            <div class="process-watermark">
+                <span class="watermark-text">PURITY</span>
+            </div>
+            
+            <!-- Top Heading Section -->
+            <div class="process-header">
+                <div class="process-header-content">
+                    <span class="process-subtitle">Our Process</span>
+                    <h2 class="process-title">
+                        The Journey <br> of <span class="text-gold">Purity</span>
+                    </h2>
+                    <p class="process-description">
+                        From careful sourcing to global delivery, every step is guided by purity, precision, and purpose.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Process Grid Section -->
+            <div class="process-grid-container">
+                <div class="process-grid">
+                    <!-- Column 01: Sourcing -->
+                    <article class="process-step-col group">
+                        <div class="step-bg">
+                            <img alt="Sourcing" class="step-bg-img" src="assets/images/proc_1.png">
+                            <div class="step-bg-overlay"></div>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-header">
+                                <span class="step-number">01</span>
+                                <h3 class="step-title">Sourcing</h3>
+                                <div class="step-icon-wrapper">
+                                    <svg class="step-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+                                </div>
+                            </div>
+                            <p class="step-description">
+                                We source from trusted farmers and fertile regions to bring you the finest raw ingredients.
+                            </p>
+                        </div>
+                    </article>
+                    
+                    <!-- Column 02: Quality Check -->
+                    <article class="process-step-col group">
+                        <div class="step-bg">
+                            <img alt="Quality Check" class="step-bg-img" src="assets/images/proc_2.png">
+                            <div class="step-bg-overlay"></div>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-header">
+                                <span class="step-number">02</span>
+                                <h3 class="step-title">Quality Check</h3>
+                                <div class="step-icon-wrapper">
+                                    <svg class="step-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+                                </div>
+                            </div>
+                            <p class="step-description">
+                                Every batch undergoes strict quality inspection to ensure purity and authenticity.
+                            </p>
+                        </div>
+                    </article>
+                    
+                    <!-- Column 03: Processing -->
+                    <article class="process-step-col group">
+                        <div class="step-bg">
+                            <img alt="Processing" class="step-bg-img" src="assets/images/proc_3.png">
+                            <div class="step-bg-overlay"></div>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-header">
+                                <span class="step-number">03</span>
+                                <h3 class="step-title">Processing</h3>
+                                <div class="step-icon-wrapper">
+                                    <svg class="step-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37a1.724 1.724 0 002.572-1.065z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+                                </div>
+                            </div>
+                            <p class="step-description">
+                                Advanced technology and hygienic processing preserve natural goodness and aroma.
+                            </p>
+                        </div>
+                    </article>
+                    
+                    <!-- Column 04: Packaging -->
+                    <article class="process-step-col group">
+                        <div class="step-bg">
+                            <img alt="Packaging" class="step-bg-img" src="assets/images/proc_4.png">
+                            <div class="step-bg-overlay"></div>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-header">
+                                <span class="step-number">04</span>
+                                <h3 class="step-title">Packaging</h3>
+                                <div class="step-icon-wrapper">
+                                    <svg class="step-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+                                </div>
+                            </div>
+                            <p class="step-description">
+                                Carefully packed using eco-friendly materials to retain freshness and ensure safety.
+                            </p>
+                        </div>
+                    </article>
+                    
+                    <!-- Column 05: Export & Delivery -->
+                    <article class="process-step-col group">
+                        <div class="step-bg">
+                            <img alt="Export & Delivery" class="step-bg-img" src="assets/images/proc_5.png">
+                            <div class="step-bg-overlay"></div>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-header">
+                                <span class="step-number">05</span>
+                                <h3 class="step-title">Export & Delivery</h3>
+                                <div class="step-icon-wrapper">
+                                    <svg class="step-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="M3.6 9h16.8M3.6 15h16.8" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+                                </div>
+                            </div>
+                            <p class="step-description">
+                                Delivered across the world with reliability, transparency, and on-time commitment.
+                            </p>
+                        </div>
+                    </article>
+                    
+                    <!-- Timeline Connector Overlay -->
+                    <div class="timeline-connector">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="process-footer">
+                <div class="scroll-explore-mouse">
+                    <div class="mouse-icon">
+                        <div class="mouse-wheel"></div>
+                    </div>
+                    <span class="scroll-text">Scroll to Explore</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="logo-bar-container">
+            <div class="logo-slider">
+                <div class="logo-track">
+                    <img src="assets/images/APEDA.avif" alt="APEDA Certification" class="cert-logo">
+                    <img src="assets/images/AYUSH.avif" alt="AYUSH Certification" class="cert-logo">
+                    <img src="assets/images/FIEO.avif" alt="FIEO Certification" class="cert-logo">
+                    <img src="assets/images/GMP.avif" alt="GMP Certification" class="cert-logo">
+                    <img src="assets/images/HACCP.avif" alt="HACCP Certification" class="cert-logo">
+                    <img src="assets/images/HALAL.avif" alt="HALAL Certification" class="cert-logo">
+                    <img src="assets/images/IAF.avif" alt="IAF Certification" class="cert-logo">
+                    <img src="assets/images/ISO1.avif" alt="ISO Certification" class="cert-logo">
+                    <img src="assets/images/ISO2.avif" alt="ISO Certification" class="cert-logo">
+                    <img src="assets/images/SPICE.avif" alt="Spice Board Certification" class="cert-logo">
+                    <img src="assets/images/APEDA.avif" alt="APEDA" class="cert-logo">
+                    <img src="assets/images/AYUSH.avif" alt="AYUSH" class="cert-logo">
+                    <img src="assets/images/FIEO.avif" alt="FIEO" class="cert-logo">
+                    <img src="assets/images/GMP.avif" alt="GMP" class="cert-logo">
+                    <img src="assets/images/HACCP.avif" alt="HACCP" class="cert-logo">
+                    <img src="assets/images/HALAL.avif" alt="HALAL" class="cert-logo">
+                    <img src="assets/images/IAF.avif" alt="IAF" class="cert-logo">
+                    <img src="assets/images/ISO1.avif" alt="ISO1" class="cert-logo">
+                    <img src="assets/images/ISO2.avif" alt="ISO2" class="cert-logo">
+                    <img src="assets/images/SPICE.avif" alt="SPICE" class="cert-logo">
+                </div>
+            </div>
+        </div>
+
+    </div> 
+
+    <script>
+        // --- SMOOTH SCROLL INIT (Lenis) ---
+        if (!window.lenis) {
+            window.lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
+                direction: 'vertical',
+                gestureDirection: 'vertical',
+                smooth: true,
+                mouseMultiplier: 1,
+                smoothTouch: false,
+                touchMultiplier: 2,
+            });
+        }
+        var lenis = window.lenis;
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // --- PARALLAX LOGIC ---
+        const defaultLayers = {
+          "layerTop": { "name": "Background (Top.png)", "x": -843, "y": 15, "scale": 1.2, "z": 100, "move": 2 },
+          "layerMid2": { "name": "Midground 2 (Mid2.png)", "x": -843, "y": 94, "scale": 1.2, "z": 200, "move": 1.5 },
+          "layerMid1": { "name": "Midground 1 (Mid1.png)", "x": -836, "y": 68, "scale": 1.2, "z": 300, "move": 1 },
+          "layerBottom": { "name": "Foreground (Bottom.png)", "x": -836, "y": -28, "scale": 1.2, "z": 400, "move": 0.5 }
+        };
+
+        const layersConfig = JSON.parse(localStorage.getItem('agrox_parallax_config_v2')) || {};
+        const layers = {};
+        for (const [id, val] of Object.entries(defaultLayers)) {
+            layers[id] = { ...val, ...(layersConfig[id] || {}) };
+        }
+
+        const stage = document.getElementById('stage');
+        const navbar = document.getElementById('navbar');
+        let mouseX = 0, mouseY = 0;
+        
+        window.addEventListener('mousemove', e => {
+            mouseX = (e.clientX / window.innerWidth) - 0.5;
+            mouseY = (e.clientY / window.innerHeight) - 0.5;
+        }, { passive: true });
+        
+        const isMobile = window.innerWidth < 768;
+
+        function renderScene() {
+            const w = window.innerWidth;
+            const h = window.innerHeight;
+            let scale = Math.max(w / 1920, h / 1080);
+            if(stage) stage.style.transform = `translate(-50%, -50%) scale(${scale})`;
+            
+            const px = (isMobile ? 0 : mouseX) * 1920; 
+            const py = (isMobile ? 0 : mouseY) * 1080;
+            
+            for (const [id, l] of Object.entries(layers)) {
+                const el = document.getElementById(id);
+                if (el) {
+                    const moveX = px * ((isMobile ? 0 : l.move) / 100);
+                    const moveY = py * ((isMobile ? 0 : l.move) / 100);
+                    el.style.cssText = `z-index: ${l.z}; transform: translate(${l.x + moveX}px, ${l.y + moveY}px) scale(${l.scale});`;
+                }
+            }
+            requestAnimationFrame(renderScene);
+        }
+
+        if(stage) {
+            renderScene();
+            window.addEventListener('resize', renderScene, { passive: true });
+            
+            window.addEventListener('scroll', () => {
+                const scrollY = window.scrollY;
+                const h = window.innerHeight;
+                const totalProgress = scrollY / h;
+                const footer = document.querySelector('.portport-footer');
+                const overlay = document.querySelector('.hero-nav-overlay');
+                
+                // 1. Stage & Overlay Fade Out
+                if (totalProgress < 1.1) {
+                    const opacity = Math.max(0, 1 - totalProgress);
+                    stage.style.opacity = opacity;
+                    stage.style.visibility = "visible";
+                    if (overlay) {
+                        overlay.style.opacity = opacity;
+                        overlay.style.visibility = "visible";
+                    }
+                } else {
+                    stage.style.visibility = "hidden"; 
+                    if (overlay) {
+                        overlay.style.opacity = 0;
+                        overlay.style.visibility = "hidden";
+                    }
+                }
+
+                // 2. Navbar Reveal
+                if (navbar) {
+                    if (totalProgress >= 0.95) navbar.classList.add('active'); 
+                    else navbar.classList.remove('active');
+                }
+
+                // 3. FIXED: Footer Text Reveal Logic
+                if (footer) {
+                    const scrollHeight = document.documentElement.scrollHeight;
+                    const clientHeight = document.documentElement.clientHeight;
+                    const scrollDistanceToBottom = scrollHeight - clientHeight - scrollY;
+
+                    // Reveal text when within 600px of bottom
+                    if (scrollDistanceToBottom < 600) {
+                        let revealValue = 1 - (scrollDistanceToBottom / 500);
+                        revealValue = Math.min(1, Math.max(0, revealValue));
+                        
+                        footer.style.setProperty('--text-reveal', revealValue);
+                        footer.style.setProperty('--scroll-glow', (revealValue * 0.15));
+                    } else {
+                        footer.style.setProperty('--text-reveal', 0);
+                    }
+                }
+            }, { passive: true });
+            
+            window.dispatchEvent(new Event('scroll'));
+        }
+
+        // --- FOOTER VISIBILITY JS FIX ---
+        window.addEventListener('load', () => {
+            lenis.resize(); 
+        });
+        const footerObserver = new ResizeObserver(() => lenis.resize());
+        footerObserver.observe(document.querySelector('#main-content'));
+
+        // --- ENTRANCE ANIMATIONS (IntersectionObserver for anim-trigger) ---
+        const entranceOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        const entranceObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    entranceObserver.unobserve(entry.target); 
+                }
+            });
+        }, entranceOptions);
+        document.querySelectorAll('.anim-trigger').forEach(el => entranceObserver.observe(el));
+
+        // Micro-interactions for map callouts
+        document.querySelectorAll('.origin-section .group.cursor-pointer').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                const icon = item.querySelector('.material-symbols-outlined');
+                if(icon) {
+                    icon.style.fontVariationSettings = "'FILL' 1";
+                    icon.style.transform = "scale(1.2)";
+                    icon.style.transition = "all 0.3s ease";
+                }
+            });
+            item.addEventListener('mouseleave', () => {
+                const icon = item.querySelector('.material-symbols-outlined');
+                if(icon) {
+                    icon.style.fontVariationSettings = "'FILL' 0";
+                    icon.style.transform = "scale(1)";
+                }
+            });
+        });
+    </script>
+
+<?php include 'footer.php'; ?>

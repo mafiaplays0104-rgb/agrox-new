@@ -1,0 +1,30 @@
+RewriteEngine On
+RewriteBase /
+
+# 1. Redirect legacy images/ to assets/images/
+RewriteRule ^images/(.*)$ assets/images/$1 [R=301,L,NC]
+
+# 2. Skip rewrite if the file or directory exists physically
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# 3. Rewrite requests for product pages inside products/ folder (with .php extension)
+# E.g., /cumin-seeds-exporter-from-india.php -> products/cumin-seeds-exporter-from-india.php
+RewriteCond %{DOCUMENT_ROOT}/public_html/products/$1 -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/products/$1 -f
+RewriteRule ^([^/]+\.php)$ products/$1 [L,NC]
+
+# 4. Rewrite extensionless requests to products/ folder if the .php file exists there
+# E.g., /cumin-seeds-exporter-from-india -> products/cumin-seeds-exporter-from-india.php
+RewriteCond %{DOCUMENT_ROOT}/public_html/products/$1.php -f
+RewriteRule ^([^/]+)$ products/$1.php [L,NC]
+RewriteCond %{DOCUMENT_ROOT}/products/$1.php -f
+RewriteRule ^([^/]+)$ products/$1.php [L,NC]
+
+# 5. Rewrite root-level extensionless requests to the root folder if the .php file exists there
+# E.g., /about-us -> about-us.php
+RewriteCond %{DOCUMENT_ROOT}/public_html/$1.php -f
+RewriteRule ^([^/]+)$ $1.php [L,NC]
+RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+RewriteRule ^([^/]+)$ $1.php [L,NC]
